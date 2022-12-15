@@ -1,0 +1,16 @@
+<launch>
+    
+    <!-- myrobot -->
+    <include file="$(find project)/launch/robot_gazebo.launch">
+    </include>
+  
+    <!-- SLAM: Gmapping -->
+    <include file="$(find project)/launch/gmapping.launch">
+    </include>
+  
+    
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false"
+        args="-d $(find project)/rviz/rviz.rviz"/>
+  
+  </launch>
+
