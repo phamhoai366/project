@@ -10,7 +10,6 @@ roslaunch project robot_gazebo.launch  -- open model in world gazebo
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 #robot_slam
-roslaunch project robot_gazebo.launch
 
 (open new terminal) roslaunch project robot_slam.launch
 
