@@ -25,7 +25,8 @@ or roslaunch project robot_navigation.launch dwa_local_planner:=true
 
 
 #astar
-roslaunch project astar.launch
+roslaunch project astar.launch x_pos:=4.0 y_pos:=3.0 yaw:=3.142
+1->0.6->3.0->2.0->4.0->3.0->3.142->-4.0->-3.0
 
 #avoid object
 roslaunch project robot_gazebo.launch
