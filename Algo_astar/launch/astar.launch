@@ -1,0 +1,25 @@
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find project)/urdf/myrobot.xacro'"/>
+    <arg name="x_pos" default="0.0"/>
+    <arg name="y_pos" default="0.0"/>
+    <arg name="z_pos" default="0.0"/>
+    <arg name="roll" default="0"/>
+    <arg name="pitch" default="0"/>
+    <arg name="yaw" default="3.14"/>
+  
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="world_name" value="$(find project)/Algo_astar/world/world4.world"/>
+      <arg name="paused" value="false"/>
+      <arg name="use_sim_time" value="true"/>
+      <arg name="gui" value="true"/>
+      <arg name="headless" value="false"/>
+      <arg name="debug" value="false"/>
+    </include>
+  
+  <node pkg="project"
+     name="Astar"
+     type="Astar.py"
+     output="screen"/>
+  
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model myrobot -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw) -param robot_description" />
+  </launch>
