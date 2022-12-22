@@ -3,12 +3,12 @@
 <launch>
 
   <!-- Robot pose -->
-  <arg name="x" default="0"/>
-  <arg name="y" default="0"/>
+  <arg name="x" default="4.0"/>
+  <arg name="y" default="3.0"/>
   <arg name="z" default="0"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
-  <arg name="yaw" default="1.5708"/>
+  <arg name="yaw" default="3.142"/>
 
   <!-- Launch other relevant files-->
   <include file="$(find project)/launch/robot_description.launch"/>
@@ -18,7 +18,7 @@
   <arg name="world_file" default="$(find project)/worlds/turtlebot3_plaza.world"/>
 -->
 
- <arg name="world_file" default="$(find project)/worlds/corridor.world"/>
+ <arg name="world_file" default="$(find project)/worlds/world4.world"/>
 
 
   <!-- Launch Gazebo World -->
