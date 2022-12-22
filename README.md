@@ -22,3 +22,11 @@ roslaunch project robot_gazebo.launch
 
 (open new terminal) roslaunch project robot_navigation.launch
 or roslaunch project robot_navigation.launch dwa_local_planner:=true
+
+
+#astar
+roslaunch project astar.launch
+
+#avoid object
+roslaunch project robot_gazebo.launch
+(open new terminal) rosrun project obstacle_avoidance.py
