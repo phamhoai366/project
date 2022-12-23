@@ -44,13 +44,7 @@
     <parent link="robot_footprint"/>
     <child link="$(arg base_frame)" />
   </joint>
-<!--
-  <joint name="camera_joint" type="fixed">
-    <origin xyz="0.26 0 0" rpy="0 0 0" />
-    <parent link="chassis"/>
-    <child link="camera" />  
-    <axis xyz="0 1 0"/> 
-  </joint>-->
+
 
   <joint name="hokuyo_joint" type="fixed">
     <origin xyz="0 0 0.2" rpy="0 0 0" />
@@ -83,44 +77,6 @@
      <parent link="$(arg base_frame)" />
      <child link="camera_depth_frame" />
   </joint>
-
-<!--
-  <joint name="left_camera_frame_joint" type="fixed">
-     <origin xyz="0 0 0.45" rpy="0 0 0" />
-     <parent link="$(arg base_frame)" />
-     <child link="left_camera_frame" />
-  </joint>
--->
-
-
-<!--
-<link name="camera">
-    <inertial>
-      <mass value="0.1"/>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia
-        ixx="1e-6" ixy="0.0" ixz="0.0"
-        iyy="1e-6" iyz="0.0"
-        izz="1e-6"
-      />
-    </inertial>
-
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.05 0.05 0.05"/>
-      </geometry>
-    </collision>
-
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.05 0.05 0.05"/>
-      </geometry>
-    </visual>
-
-  </link>-->
-
 
   <link name="hokuyo">
     <inertial>
@@ -288,35 +244,5 @@
     </visual>
 
   </link>
-
-<!--
-  <link name="left_camera_frame">
-    <inertial>
-      <mass value="0.1"/>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia
-        ixx="1e-6" ixy="0.0" ixz="0.0"
-        iyy="1e-6" iyz="0.0"
-        izz="1e-6"
-      />
-    </inertial>
-
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.05 0.05 0.05"/>
-      </geometry>
-    </collision>
-
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="package://project/meshes/zed.stl"/>
-      </geometry>
-    </visual>
-
-  </link>
--->
-
 
 </robot>
