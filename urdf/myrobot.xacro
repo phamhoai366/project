@@ -14,10 +14,7 @@
   <gazebo reference="right_wheel">
     <material>Gazebo/Green</material>
   </gazebo>
-<!--
-  <gazebo reference="camera">
-    <material>Gazebo/Red</material>
-  </gazebo>-->
+
 
   <gazebo reference="$(arg base_frame)">
     <material>Gazebo/Blue</material>
